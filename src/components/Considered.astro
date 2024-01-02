@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets'
+import ldcIllustration from '@assets/ldc-illustration-01.svg'
+---
+
+<div class="pb-20">
+    <div
+        class="mx-auto flex flex-col items-center justify-center gap-5 md:flex-row"
+    >
+        <div class="w-[90%] max-w-[375px]">
+            <Image src={ldcIllustration} alt="LDC illustration" />
+        </div>
+        <div
+            class="flex max-w-[310px] flex-col gap-2 text-center md:max-w-[350px] md:gap-4 md:text-left"
+        >
+            <h2 class="text-lg">Mungkin kamu merasa bimbang,</h2>
+            <h3 class="text-2xl font-bold md:text-4xl">
+                Apa perlu website saya di redesign?
+            </h3>
+            <p class="text-sm md:text-lg">
+                Sebelum ambil keputusan, yuk coba centang dulu performa website
+                mu saat ini
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+---
+import { nineSign } from '@data/nineSign'
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="mx-auto max-w-[1000px]">
+    <div class="flex flex-col items-center gap-5 px-5 pb-16 pt-9 md:gap-6">
+        <h2 class="text-center text-2xl font-bold md:text-4xl">
+            9 Tanda Website Bermasalah
+        </h2>
+        <ul
+            class="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-5"
+        >
+            {
+                nineSign.map((sign) => (
+                    <li class="flex flex-row items-center gap-2 rounded-xl bg-[#2897ec] px-3 py-3 text-sm font-medium text-white md:text-base">
+                        <Icon name="check-square" class="text-lg" />
+                        {sign}
+                    </li>
+                ))
+            }
+        </ul>
+        <p class="text-center text-sm md:text-lg">
+            Mencentang 1 pernyataan saja sudah menandakan bahwa website mu
+            sebaiknya segera diperbarui.
+        </p>
+    </div>
+</div>

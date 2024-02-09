@@ -1,0 +1,175 @@
+---
+const slideWidth = '250px'
+const slideLength = 7
+const sliderDuration = '40s'
+---
+
+<div class="flex flex-col items-center pb-16 pt-10">
+    <h2 class="text-2xl font-bold">Trusted By</h2>
+    <div
+        class="slider relative m-auto h-[100px] w-full overflow-hidden bg-white"
+    >
+        <div class="slide-track flex">
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+            <div class="slide">
+                <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+                    height="100"
+                    width="250"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+    <div class="mx-5 flex flex-col text-center">
+        <h3 class="text-sm font-bold">
+            Saatnya Optimalkan Performa Website Sekarang Juga!
+        </h3>
+        <p class="text-sm">
+            Kami siap menjadi bagian dari solusi permasalahan websitemu agar
+            lebih terdepan!!
+        </p>
+    </div>
+</div>
+
+<style
+    define:vars={{
+        imageWidth: slideWidth,
+        imageLength: slideLength,
+        slideDuration: sliderDuration,
+    }}
+>
+    @-webkit-keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(
+                calc(var(--imageWidth) * -1 * var(--imageLength))
+            );
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(
+                calc(var(--imageWidth) * -1 * var(--imageLength))
+            );
+        }
+    }
+    .slider .slide-track {
+        -webkit-animation: scroll var(--slideDuration) linear infinite;
+        animation: scroll var(--slideDuration) linear infinite;
+        width: calc(var(--imageWidth) * var(--imageLength) * 2);
+    }
+    .slider .slide {
+        height: 100px;
+        width: var(--imageWidth);
+    }
+</style>
